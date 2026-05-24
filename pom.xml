@@ -10,6 +10,7 @@
         <site.url>http://hipster4j.org</site.url>
         <!-- Hipster version -->
         <hipster.version>1.0.3-SNAPSHOT</hipster.version>
+        <sonar.organization>rahernan5</sonar.organization>
     </properties>
 
     <groupId>es.usc.citius.hipster</groupId>
