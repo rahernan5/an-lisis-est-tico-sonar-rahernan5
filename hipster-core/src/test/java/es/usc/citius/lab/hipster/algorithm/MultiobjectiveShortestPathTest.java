@@ -123,9 +123,9 @@ public class MultiobjectiveShortestPathTest {
         // Create our custom binary operation:
         BinaryOperation<Cost> bf = new BinaryOperation<Cost>(f, identity, max);
 
-        System.out.println(Hipster.createMultiobjectiveLS(GraphSearchProblem.startingFrom("v1").in(graph).useGenericCosts(bf).build()).search("v6"));
-
         // Arreglar Issue 1
+        Object searchResult = Hipster.createMultiobjectiveLS(GraphSearchProblem.startingFrom("v1").in(graph).useGenericCosts(bf).build()).search("v6");
+        System.out.println(searchResult);
         assertNotNull("El algoritmo de búsqueda debería devolver un resultado válido, no null", searchResult);
     }
 }
