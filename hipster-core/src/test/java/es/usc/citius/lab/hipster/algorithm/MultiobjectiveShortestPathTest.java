@@ -23,6 +23,7 @@ import es.usc.citius.hipster.model.function.BinaryFunction;
 import es.usc.citius.hipster.model.function.impl.BinaryOperation;
 import es.usc.citius.hipster.graph.HipsterDirectedGraph;
 import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * @author Pablo Rodríguez Mier <<a href="mailto:pablo.rodriguez.mier@usc.es">pablo.rodriguez.mier@usc.es</a>>
@@ -124,6 +125,7 @@ public class MultiobjectiveShortestPathTest {
 
         System.out.println(Hipster.createMultiobjectiveLS(GraphSearchProblem.startingFrom("v1").in(graph).useGenericCosts(bf).build()).search("v6"));
 
-        // TODO; Add solution verification
+        // Arreglar Issue 1
+        assertNotNull("El algoritmo de búsqueda debería devolver un resultado válido, no null", searchResult);
     }
 }
